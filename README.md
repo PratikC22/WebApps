@@ -11,3 +11,4 @@
 8. Promise.
 9. Nested callback functions aka callback hell
 10. Handling callback hell using promises.
+11. ES6 Modules - Merge sort, bubble sort, selection sort, binary search
