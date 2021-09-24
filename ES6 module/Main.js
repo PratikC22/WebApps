@@ -9,4 +9,4 @@ let sortedArray = [1, 2, 3, 4, 5, 6];
 console.log(bubbleSort(array));
 console.log(selectionSort(array));
 console.log(mergeSort(merge(array1, array2)));
-console.log("Entry found at index " + binarySearch(sortedArray, 4));
+console.log(binarySearch(sortedArray, 4));
