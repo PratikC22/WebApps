@@ -14,3 +14,4 @@
 10. Handling callback hell using promises.
 ### ES6 Modules - 
 1. Merge sort, bubble sort, selection sort, binary search
+### JSON file read/write
