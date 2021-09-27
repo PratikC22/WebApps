@@ -1,11 +1,8 @@
-{
-  "name": "Pratik",
-  "age": 28,
-  "language": [
-    "Java",
-    "JavaScript",
-    "HTML",
-    "CSS"
-  ],
-  "company": "Happiest Minds"
-}
+[
+  {
+    "name": "Pratik",
+    "age": 28,
+    "technology": "WebApp with react",
+    "company": "Happiest Minds"
+  }
+]

@@ -1,22 +1,36 @@
-const fs = require('fs');
+import { appendFile, readFileSync, writeFileSync } from "fs";
 
-fs.readFile('data.json', (err, data) => {
-    if (err) throw err;
-    let student = JSON.parse(data);
-    console.log(student);
-});
-
-let student = {
-    name: 'Pratik',
-    age: 28,
-    language: ["Java", "JavaScript", "HTML", "CSS"],
-    company: 'Happiest Minds'
+let emp = {
+  name: "Pratik",
+  age: 28,
+  technology: "WebApp with react",
+  company: "Happiest Minds",
+  location: "Banglore",
 };
 
-let data = JSON.stringify(student, null, 2);
+let empData = JSON.stringify(emp, null, 2);
 
-fs.writeFile('new-data.json', data, (err) => {
-    if (err) throw err;
-    console.log('Data written to new file');
+appendFile("updatedJSON.json", empData, (err) => {
+  if (err) throw err;
+  console.log("Data written to new file");
 });
 
+const doc = readFileSync("data.json");
+const toString = doc.toString(); // convert to string
+const data = JSON.parse(toString); // string to object
+console.log(data);
+
+function convertToCSV(arr) {
+  const array = [Object.keys(arr[0])].concat(arr);
+
+  return array
+    .map((it) => {
+      return Object.values(it).toString();
+    })
+    .join("\n");
+}
+
+writeFileSync("convertedToCSV.csv", convertToCSV(data), (err) => {
+  if (err) throw err;
+  console.log("Data written to new file");
+});
