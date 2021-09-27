@@ -21,7 +21,6 @@ const toString = doc.toString(); // convert to string
 const data = JSON.parse(toString); // string to object
 console.log(data);
 
-
 //Conversion of JSON to XML
 function convertToCSV(arr) {
   const array = [Object.keys(arr[0])].concat(arr);
@@ -32,7 +31,6 @@ function convertToCSV(arr) {
     })
     .join("\n");
 }
-
 
 //Creating new file with CSV data
 writeFileSync("convertedToCSV.csv", convertToCSV(data), (err) => {
@@ -61,7 +59,6 @@ function convertToXML(obj) {
   var xml = xml.replace(/<\/?[0-9]{1,}>/g, "");
   return xml;
 }
-
 
 //Creating new file with XML data
 writeFileSync("convertedToXML.xml", convertToXML(data), (err) => {
