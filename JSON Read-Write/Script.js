@@ -21,7 +21,7 @@ const toString = doc.toString(); // convert to string
 const data = JSON.parse(toString); // string to object
 console.log(data);
 
-//Conversion of JSON to XML
+//Conversion of JSON to CSV
 function convertToCSV(arr) {
   const array = [Object.keys(arr[0])].concat(arr);
 
